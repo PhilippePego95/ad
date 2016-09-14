@@ -4,8 +4,6 @@ Instal·lació Monodevelop
 	-Synaptic 
 		*Monodevelop
 		*Monodevelop-database
-			"la libreria no la encuentra, hay que ir a synaptic buscar, libmysql6.4-cil y buscar la ruta,
-			/usr/lib/cli/MySql.Data-6.4/MySql.Data.dll, desde monodevelop añadir en referencias
 		*Monodevelop-nunit
 		*Monodevelop-versioncontrol
 		*Monodoc-browser
