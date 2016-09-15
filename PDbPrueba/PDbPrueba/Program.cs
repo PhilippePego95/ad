@@ -6,8 +6,12 @@ namespace PDbPrueba
 	{
 		public static void Main (string[] args)
 		{
-			Console.WriteLine ("Hello World!");
-			MySqlConnection mySqlConnection = new MySqlConnection ("");
+			Console.WriteLine ("Probando acceso a dbPrueba");
+			MySqlConnection mySqlConnection = new MySqlConnection 
+				("Database=dbprueba; User Id=root; Password=sistemas");
+			mySqlConnection.Open ();
+			//operacioins
+			mySqlConnection.Close ();
 		}
 	}
 }
