@@ -1,0 +1,7 @@
+2016/09/15
+
+	*Menu que conecte amb la base de dades, 0: Salir, 1:Nuevo, 2:Editar , 3:Eliminar, 4 :Listar_todos
+
+	-Metodo "creatcomand" permite devolver un dbcommand, tiene una propiedad llamada comandText " insert into..." i parametros
+	-Los comandos los podemos ejecutar con "ExecuteReader"(select..) si no son selectes ejecutaremos "ExecuteNonQuery"(insert, update,delete)
+
