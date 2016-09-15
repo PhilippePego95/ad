@@ -19,4 +19,14 @@ Synaptic git / terminal -> sudo apt-get install git
 Bitnami-lamp, servidor de base de dades, version 5.6.25
 	"https://bitnami.com/stack/lamp"
 
-		
+2016/09/15
+
+ creación del repositorio ad en github (o bitbucket)
+
+ clonado en local:
+  git clone https://github.com/luisvelasco16/ad.git
+
+ configuración inicial para git:
+  git config --global user.name philippepego95
+  git config --global user.email p.gonzalezmiralles@gmail.com
+  git config --global push.default simple
