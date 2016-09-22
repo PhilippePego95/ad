@@ -12,6 +12,14 @@ namespace PDbPrueba
 
 			IDbConnection dbConnection = new MySqlConnection ("Database=dbprueba; User Id=root; Password=sistemas");
 			dbConnection.Open ();
+			dbConnection.CreateCommand ();
+			IDbCommand dbCommand= dbConnection.CreateCommand();
+			IDbDataParameter dbDataParameter = dbCommand.CreateParameter ();
+			IDataParameter parameterName = dbCommand.CreateParameter();
+			IDataParameter parameterID = dbCommand.CreateParameter();
+			IDbDataParameter Parameter = dbCommand.CreateParameter ();
+
+
 			
 			
 			Boolean bandera=true;
@@ -29,49 +37,60 @@ namespace PDbPrueba
 					bandera=false;
 					break;
 					case '1': Console.Write("\n Creant..");
-					// Continuar lógica y extraer métodos //
-						//Console.WriteLine ("Probando acceso a dbPrueba");
-
-						
-
-						//operacioins...
-						dbConnection.CreateCommand ();
-
-						IDbCommand dbCommand= dbConnection.CreateCommand();
 						dbCommand.CommandText = "insert into categoria (nombre) values (@nombre)";
-
-						IDbDataParameter dbDataParameter = dbCommand.CreateParameter ();
+											
 						dbDataParameter.ParameterName = "nombre";
 						Console.WriteLine("Disme el nom ");
 						String nom = Console.ReadLine();
 						dbDataParameter.Value = nom;
 						dbCommand.Parameters.Add (dbDataParameter);
-						dbCommand.ExecuteNonQuery ();
-						
+						dbCommand.ExecuteNonQuery ();				
 
 						
 					break;
 					case '2': Console.Write("\n Editant..");
 
-					IDbCommand cmd1 = dbConnection.CreateCommand();
-					cmd1.CommandText="Update categoria set nombre =@nombre where id=@id";
-					IDataReader dr1 =cmd1.ExecuteReader();
-					dr1.Close();
+					dbCommand.CommandText="Update categoria set nombre =@nombre where id=@id";
+
+					Console.WriteLine("Disme el id ");
+					String id = Console.ReadLine();
+					parameterID.ParameterName = "id";
+					parameterID.Value = id;
+					dbCommand.Parameters.Add (parameterID);
+						
+					parameterName.ParameterName = "nombre";
+					Console.WriteLine("Disme el nom ");
+					String names = Console.ReadLine();
+					parameterName.Value = names;
+					dbCommand.Parameters.Add (parameterName);
+
+					dbCommand.ExecuteNonQuery ();
+
+
 					break;
 					case '3': Console.Write("\n Eliminant..");
-					// Continuar lógica y extraer métodos //
+
+					dbCommand.CommandText = "delete from categoria where nombre = @nombre";
+
+					Parameter.ParameterName = "nombre";
+					Console.WriteLine("Disme el nom ");
+					String name = Console.ReadLine();
+					Parameter.Value = name;
+					dbCommand.Parameters.Add (Parameter);
+					dbCommand.ExecuteNonQuery ();
+
 					break;
 					case '4': Console.WriteLine("\n Llistant..");
 
 										
-					IDbCommand cmd = dbConnection.CreateCommand();
-					cmd.CommandText="Select * From categoria";
-					IDataReader dr =cmd.ExecuteReader();
 
-						while(dr.Read()){
+					dbCommand.CommandText="Select * From categoria";
+					IDataReader dr =dbCommand.ExecuteReader();
 
-							Console.Write(Convert.ToString(dr["id"]));
-							Console.WriteLine(Convert.ToString(dr["nombre"]));
+					while(dr.Read()){
+
+							Console.Write(dr["id"]);
+							Console.WriteLine(dr["nombre"]);
 																
 					}dr.Close();	
 				
@@ -80,14 +99,8 @@ namespace PDbPrueba
 				Console.ReadKey();
 			}while (bandera==true);
 			
-		dbConnection.Close ();
-		
-
-	
-	/*}private static void parametrosnombre(String parametros,String valor,IDbCommand comand, IDbDataParameter ParameterNombre){
-			dataparameternombre.ParameterName = parametrosnombre;
-			IDataParameternombre.Value = Valor;
-}*/
+			dbConnection.Close ();
+				
 	}
 	}
 }
