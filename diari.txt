@@ -35,3 +35,11 @@ Bitnami-lamp, servidor de base de dades, version 5.6.25
 
 Documentació per a conexions 
 	-http://dev.mysql.com/doc/connector-net/en/connector-net-connection-options.html
+
+2016/09/22
+
+Crear metodos para llamarlos desde el menu, i existen diferentesmetodos para compartir informacion de metodo a metodo
+	*Pasar la variable si son metodos que llama uno a otro
+	*El codigo tiene que ser facil de leer, **Y porque un programa termine, no quiere decir que este terminado hay que ordenar el codigo**
+
+El projecte de categoria en els seus metodes de eixir, nou, modificar i llistar esta acabat i en el github , i acabem de crear una novatabla en mysql que es diu "articulo"
