@@ -1,5 +1,5 @@
 Acces a dades
-2016/08/13
+2016/09/13
 
 Instal·lació Monodevelop
 	-Synaptic 
@@ -30,3 +30,14 @@ Bitnami-lamp, servidor de base de dades, version 5.6.25
   git config --global user.name philippepego95
   git config --global user.email p.gonzalezmiralles@gmail.com
   git config --global push.default simple
+
+2016/09/20
+
+Documentació per a conexions 
+	-http://dev.mysql.com/doc/connector-net/en/connector-net-connection-options.html
+
+2016/09/22
+
+Crear metodos para llamarlos desde el menu, i existen diferentesmetodos para compartir informacion de metodo a metodo
+	*Pasar la variable si son metodos que llama uno a otro
+	*El codigo tiene que ser facil de leer, **Y porque un programa termine, no quiere decir que este terminado hay que ordenar el codigo**

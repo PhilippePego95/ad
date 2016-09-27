@@ -12,8 +12,10 @@ namespace PDbPrueba
 
 			IDbConnection dbConnection = new MySqlConnection ("Database=dbprueba; User Id=root; Password=sistemas");
 			dbConnection.Open ();
-			dbConnection.CreateCommand ();
+			dbConnection.CreateCommand ();			
+
 			IDbCommand dbCommand= dbConnection.CreateCommand();
+
 			IDbDataParameter dbDataParameter = dbCommand.CreateParameter ();
 			IDataParameter parameterName = dbCommand.CreateParameter();
 			IDataParameter parameterID = dbCommand.CreateParameter();
@@ -70,13 +72,13 @@ namespace PDbPrueba
 					break;
 					case '3': Console.Write("\n Eliminant..");
 
-					dbCommand.CommandText = "delete from categoria where nombre = @nombre";
+					dbCommand.CommandText = "delete from categoria where id = @id";
 
-					Parameter.ParameterName = "nombre";
-					Console.WriteLine("Disme el nom ");
-					String name = Console.ReadLine();
-					Parameter.Value = name;
-					dbCommand.Parameters.Add (Parameter);
+					parameterID.ParameterName= "id";
+					Console.WriteLine("Disme el id ");
+					String ids = Console.ReadLine();
+					parameterID.Value = ids;
+					dbCommand.Parameters.Add (parameterID);
 					dbCommand.ExecuteNonQuery ();
 
 					break;
@@ -95,6 +97,7 @@ namespace PDbPrueba
 					}dr.Close();	
 				
 					break;
+
 				} 
 				Console.ReadKey();
 			}while (bandera==true);
