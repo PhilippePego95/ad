@@ -34,7 +34,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="MySql.Data">
-      <HintPath>..\..\..\..\usr\lib\cli\MySql.Data-6.4\MySql.Data.dll</HintPath>
+      <HintPath>..\..\..\..\..\usr\lib\cli\MySql.Data-6.4\MySql.Data.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
