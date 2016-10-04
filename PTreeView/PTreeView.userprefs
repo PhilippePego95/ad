@@ -2,14 +2,17 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="PTreeView/MainWindow.cs">
     <Files>
-      <File FileName="PTreeView/MainWindow.cs" Line="29" Column="23" />
-      <File FileName="../solucion/solucion/Program.cs" Line="93" Column="4" />
-      <File FileName="../PDbPrueba/PDbPrueba/Program.cs" Line="90" Column="48" />
+      <File FileName="PTreeView/MainWindow.cs" Line="15" Column="3" />
+      <File FileName="Org.InstitutoSerpis.Ad/TreeViewHelper.cs" Line="20" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
+          <Node name="Org.InstitutoSerpis.Ad" expanded="True">
+            <Node name="References" expanded="True" />
+          </Node>
           <Node name="PTreeView" expanded="True">
+            <Node name="References" expanded="True" />
             <Node name="MainWindow.cs" selected="True" />
           </Node>
         </State>

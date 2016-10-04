@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PTreeView", "PTreeView\PTreeView.csproj", "{AD02375C-35E7-4F4E-867E-19ABB20AC806}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Org.InstitutoSerpis.Ad", "Org.InstitutoSerpis.Ad\Org.InstitutoSerpis.Ad.csproj", "{F582E5DE-7332-4677-ACC2-8F316CB6FC89}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,6 +15,10 @@ Global
 		{AD02375C-35E7-4F4E-867E-19ABB20AC806}.Debug|x86.Build.0 = Debug|x86
 		{AD02375C-35E7-4F4E-867E-19ABB20AC806}.Release|x86.ActiveCfg = Release|x86
 		{AD02375C-35E7-4F4E-867E-19ABB20AC806}.Release|x86.Build.0 = Release|x86
+		{F582E5DE-7332-4677-ACC2-8F316CB6FC89}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F582E5DE-7332-4677-ACC2-8F316CB6FC89}.Debug|x86.Build.0 = Debug|Any CPU
+		{F582E5DE-7332-4677-ACC2-8F316CB6FC89}.Release|x86.ActiveCfg = Release|Any CPU
+		{F582E5DE-7332-4677-ACC2-8F316CB6FC89}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = PTreeView\PTreeView.csproj

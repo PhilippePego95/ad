@@ -75,4 +75,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Org.InstitutoSerpis.Ad\Org.InstitutoSerpis.Ad.csproj">
+      <Project>{F582E5DE-7332-4677-ACC2-8F316CB6FC89}</Project>
+      <Name>Org.InstitutoSerpis.Ad</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
