@@ -5,10 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{AD02375C-35E7-4F4E-867E-19ABB20AC806}</ProjectGuid>
+    <ProjectGuid>{5BDC27EB-53EC-4DC1-92AE-D75CBF175365}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>PTreeView</RootNamespace>
-    <AssemblyName>PTreeView</AssemblyName>
+    <RootNamespace>PTreeView2</RootNamespace>
+    <AssemblyName>PTreeView2</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -57,10 +57,9 @@
       <Package>gtk-sharp-2.0</Package>
     </Reference>
     <Reference Include="Mono.Posix" />
-    <Reference Include="MySql.Data">
-      <HintPath>..\..\..\..\..\usr\lib\cli\MySql.Data-6.4\MySql.Data.dll</HintPath>
+    <Reference Include="Org.InstitutoSerpis.Ad">
+      <HintPath>..\..\Org.InstitutoSerpis.Ad\Org.InstitutoSerpis.Ad\bin\Debug\Org.InstitutoSerpis.Ad.dll</HintPath>
     </Reference>
-    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="gtk-gui\gui.stetic">
@@ -71,13 +70,8 @@
     <Compile Include="gtk-gui\generated.cs" />
     <Compile Include="MainWindow.cs" />
     <Compile Include="gtk-gui\MainWindow.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\Org.InstitutoSerpis.Ad\Org.InstitutoSerpis.Ad.csproj">
-      <Project>{F582E5DE-7332-4677-ACC2-8F316CB6FC89}</Project>
-      <Name>Org.InstitutoSerpis.Ad</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>
