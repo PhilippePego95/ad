@@ -1,18 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Org.InstitutoSerpis.Ad/TreeViewHelper.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../PTreeView2/PTreeView2/MainWindow.cs">
     <Files>
-      <File FileName="Org.InstitutoSerpis.Ad/TreeViewHelper.cs" Line="12" Column="8" />
+      <File FileName="Org.InstitutoSerpis.Ad/TreeViewHelper.cs" Line="21" Column="6" />
+      <File FileName="../PTreeView2/PTreeView2/MainWindow.cs" Line="48" Column="37" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="Org.InstitutoSerpis.Ad" expanded="True">
-            <Node name="References" selected="True" />
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
