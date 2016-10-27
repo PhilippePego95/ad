@@ -77,6 +77,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Articulo.cs" />
+    <Compile Include="ArticuloView.cs" />
+    <Compile Include="gtk-gui\PArticulo.ArticuloView.cs" />
+    <Compile Include="Properties\App.cs" />
+    <Compile Include="gtk-gui\PArticulo.App.cs" />
+    <Compile Include="DBCommandHelper.cs" />
+    <Compile Include="gtk-gui\PArticulo.DBCommandHelper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

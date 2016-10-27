@@ -26,15 +26,15 @@ namespace Stetic
 
 		public static Gtk.ActionGroup GetActionGroup (string name)
 		{
-			if ((name == "PArticulo.App")) {
+			if ((name == "Org.InstitutoSerpis.Ad.ComboBoxHelper")) {
 				if ((global::Stetic.ActionGroups.group1 == null)) {
-					global::Stetic.ActionGroups.group1 = new PArticulo.App ();
+					global::Stetic.ActionGroups.group1 = new Org.InstitutoSerpis.Ad.ComboBoxHelper ();
 				}
 				return global::Stetic.ActionGroups.group1;
 			} else {
-				if ((name == "PArticulo.DBCommandHelper")) {
+				if ((name == "Org.InstitutoSerpis.Ad.Null")) {
 					if ((global::Stetic.ActionGroups.group2 == null)) {
-						global::Stetic.ActionGroups.group2 = new PArticulo.DBCommandHelper ();
+						global::Stetic.ActionGroups.group2 = new Org.InstitutoSerpis.Ad.Null ();
 					}
 					return global::Stetic.ActionGroups.group2;
 				} else {
