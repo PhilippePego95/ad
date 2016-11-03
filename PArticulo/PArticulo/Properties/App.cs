@@ -1,7 +1,7 @@
 using System;
 using System.Data;
 
-namespace Org.InstitutoSerpis.Ad
+namespace Org.InstitutoSerpis.Ad{
 
 	public class App{ 
 	private App(){	}
@@ -16,4 +16,5 @@ namespace Org.InstitutoSerpis.Ad
 		set {dbConnection = value;}
 	}
 
+}
 }

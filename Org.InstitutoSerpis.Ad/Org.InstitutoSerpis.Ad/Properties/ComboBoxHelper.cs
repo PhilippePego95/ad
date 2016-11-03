@@ -5,14 +5,16 @@ using System.Collections;
 
 
 namespace Org.InstitutoSerpis.Ad 
+{
 
 //	public class Null {
 //		public static readonly Null Value = new Null ();
 
 
-	public partial class ComboBoxHelper {
-
-		public static void Fill(ComboBox comboBox, IList list, string propertyName){
+	public class ComboBoxHelper 
+	{
+		public static void Fill(ComboBox comboBox, IList list, string propertyName)
+		{
 			Type listType = list.GetType ();
 			Type elementType = listType.GetGenericArguments () [0];
 			PropertyInfo propertyInfo= elementType.GetProperty (propertyName);
@@ -27,16 +29,23 @@ namespace Org.InstitutoSerpis.Ad
 			comboBox.SetCellDataFunc (cellRendererText,
 			       delegate(CellLayout cell_layout, CellRenderer cell, TreeModel tree_model, TreeIter iter) {
 				object item = tree_model.GetValue(iter,0);
-//				if (item ==Null.value)
-//				{
-//					cellRendererText.Text = "<Sin asiganar>";
-//					return;
-//				} 
-//				object value= propertyInfo.GetValue(item, null);
 				object value = item == Null.Value ? "<sin asignar>" :  propertyInfo.GetValue(item, null);
-				cellRendererText.Text = value.ToString();
-			}
+			cellRendererText.Text = value.ToString();
+				}
 			);
-		}        
+		}
+	public static object GetId(ComboBox comboBox)
+		{
+		TreeIter treeIter;
+		comboBox.GetActiveIter (out treeIter);
+		object item = comboBox.Model.GetValue (treeIter, 0);
+		//return item== Null.Value ? : (object)(((Categoria)Item.Id);
+//		if (item ==  Null.Value)
+//			return null;
+//		Type elementType = item.GetType ();
+//		PropertyInfo propertyInfo = elementType.GetProperty ("Id");
+//		return propertyInfo.GetValue (Item, null);
+		return item == Null.Value ? null : item.GetType ().GetProperty ("Id").GetValue (item, null);
 	}
-
+}
+}

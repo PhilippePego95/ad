@@ -24,7 +24,8 @@ namespace PArticulo
 				decimal precio = (decimal)spinButtonPrecio.Value;
 				TreeIter treeIter; 
 				comboBoxCategoria.GetActiveIter(out treeIter);
-				comboBoxCategoria.Model.GetValue(treeIter,0);
+				object item= comboBoxCategoria.Model.GetValue(treeIter ,0);
+				object value = item ==Null.value ? null: (object)(((Categoria)item).Id);
 
 				string insertSql ="insert into articulo (nombre, precio) values (@nombre,@precio)";
 				IDbCommand dbCommand = App.Instance.DbConnection.CreateCommand ();
@@ -33,7 +34,7 @@ namespace PArticulo
 				DBCommandHelper.AddParameter (dbCommand, "precio", precio);
 				dbCommand.ExecuteNonQuery ();
 				};
-
+			                                                                                                																                                                                                             
 			entryNombre.Changed += delegate {
 				string content = entryNombre.Text.Trim();
 				saveAction.Sensitive = content != string.Empty;
