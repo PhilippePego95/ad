@@ -1,9 +1,11 @@
 using System;
 
-namespace PArticulo {
-
-	public class Articulo {
-
+namespace PArticulo
+{
+	public class Articulo
+	{
+		public Articulo() {
+		}
 		public Articulo (long id, string nombre, decimal? precio, long? categoria) {
 			Id = id;
 			Nombre = nombre;
@@ -11,10 +13,10 @@ namespace PArticulo {
 			Categoria = categoria;
 		}
 
-		public long Id 		   { set; get; }
-		public string Nombre   { set; get; }
-		public decimal? Precio { set; get; }
-		public long? Categoria { set; get; }
+		public long Id { get; set; }
+		public string Nombre { get; set; }
+		public decimal? Precio { get; set; }
+		public long? Categoria { get; set; }
 	}
 }
 

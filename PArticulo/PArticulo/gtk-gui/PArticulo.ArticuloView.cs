@@ -13,9 +13,9 @@ namespace PArticulo
 		private global::Gtk.Entry entryNombre;
 		private global::Gtk.HBox hbox1;
 		private global::Gtk.SpinButton spinButtonPrecio;
+		private global::Gtk.Label label1;
+		private global::Gtk.Label label2;
 		private global::Gtk.Label label3;
-		private global::Gtk.Label Nomnre;
-		private global::Gtk.Label Preu;
 
 		protected virtual void Build ()
 		{
@@ -76,11 +76,12 @@ namespace PArticulo
 			this.hbox1.Name = "hbox1";
 			this.hbox1.Spacing = 6;
 			// Container child hbox1.Gtk.Box+BoxChild
-			this.spinButtonPrecio = new global::Gtk.SpinButton (-1000000, 10000000, 1);
+			this.spinButtonPrecio = new global::Gtk.SpinButton (-10000000, 10000000, 1);
 			this.spinButtonPrecio.CanFocus = true;
 			this.spinButtonPrecio.Name = "spinButtonPrecio";
 			this.spinButtonPrecio.Adjustment.PageIncrement = 10;
 			this.spinButtonPrecio.ClimbRate = 1;
+			this.spinButtonPrecio.Digits = ((uint)(2));
 			this.spinButtonPrecio.Numeric = true;
 			this.hbox1.Add (this.spinButtonPrecio);
 			global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.spinButtonPrecio]));
@@ -96,46 +97,47 @@ namespace PArticulo
 			w6.XOptions = ((global::Gtk.AttachOptions)(4));
 			w6.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table1.Gtk.Table+TableChild
-			this.label3 = new global::Gtk.Label ();
-			this.label3.Name = "label3";
-			this.label3.Xalign = 0F;
-			this.label3.LabelProp = global::Mono.Unix.Catalog.GetString ("Categoria");
-			this.table1.Add (this.label3);
-			global::Gtk.Table.TableChild w7 = ((global::Gtk.Table.TableChild)(this.table1 [this.label3]));
-			w7.TopAttach = ((uint)(2));
-			w7.BottomAttach = ((uint)(3));
+			this.label1 = new global::Gtk.Label ();
+			this.label1.Name = "label1";
+			this.label1.Xalign = 1F;
+			this.label1.LabelProp = global::Mono.Unix.Catalog.GetString ("Nombre");
+			this.table1.Add (this.label1);
+			global::Gtk.Table.TableChild w7 = ((global::Gtk.Table.TableChild)(this.table1 [this.label1]));
 			w7.XOptions = ((global::Gtk.AttachOptions)(4));
 			w7.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table1.Gtk.Table+TableChild
-			this.Nomnre = new global::Gtk.Label ();
-			this.Nomnre.Name = "Nomnre";
-			this.Nomnre.Xalign = 1F;
-			this.Nomnre.LabelProp = global::Mono.Unix.Catalog.GetString ("Nom");
-			this.table1.Add (this.Nomnre);
-			global::Gtk.Table.TableChild w8 = ((global::Gtk.Table.TableChild)(this.table1 [this.Nomnre]));
+			this.label2 = new global::Gtk.Label ();
+			this.label2.Name = "label2";
+			this.label2.Xalign = 1F;
+			this.label2.LabelProp = global::Mono.Unix.Catalog.GetString ("Precio");
+			this.table1.Add (this.label2);
+			global::Gtk.Table.TableChild w8 = ((global::Gtk.Table.TableChild)(this.table1 [this.label2]));
+			w8.TopAttach = ((uint)(1));
+			w8.BottomAttach = ((uint)(2));
 			w8.XOptions = ((global::Gtk.AttachOptions)(4));
 			w8.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table1.Gtk.Table+TableChild
-			this.Preu = new global::Gtk.Label ();
-			this.Preu.Name = "Preu";
-			this.Preu.Xalign = 1F;
-			this.Preu.LabelProp = global::Mono.Unix.Catalog.GetString ("Preu");
-			this.table1.Add (this.Preu);
-			global::Gtk.Table.TableChild w9 = ((global::Gtk.Table.TableChild)(this.table1 [this.Preu]));
-			w9.TopAttach = ((uint)(1));
-			w9.BottomAttach = ((uint)(2));
+			this.label3 = new global::Gtk.Label ();
+			this.label3.Name = "label3";
+			this.label3.Xalign = 1F;
+			this.label3.LabelProp = global::Mono.Unix.Catalog.GetString ("Categoría");
+			this.table1.Add (this.label3);
+			global::Gtk.Table.TableChild w9 = ((global::Gtk.Table.TableChild)(this.table1 [this.label3]));
+			w9.TopAttach = ((uint)(2));
+			w9.BottomAttach = ((uint)(3));
 			w9.XOptions = ((global::Gtk.AttachOptions)(4));
 			w9.YOptions = ((global::Gtk.AttachOptions)(4));
 			this.vbox1.Add (this.table1);
 			global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.table1]));
 			w10.Position = 1;
 			w10.Expand = false;
+			w10.Fill = false;
 			this.Add (this.vbox1);
 			if ((this.Child != null)) {
 				this.Child.ShowAll ();
 			}
-			this.DefaultWidth = 393;
-			this.DefaultHeight = 158;
+			this.DefaultWidth = 431;
+			this.DefaultHeight = 157;
 			this.Show ();
 		}
 	}

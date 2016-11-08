@@ -3,13 +3,13 @@
 public partial class MainWindow
 {
 	private global::Gtk.UIManager UIManager;
-	private global::Gtk.ToggleAction newAction;
-	private global::Gtk.RadioAction editAction;
+	private global::Gtk.Action newAction;
+	private global::Gtk.Action editAction;
+	private global::Gtk.Action ArchivoAction;
 	private global::Gtk.Action deleteAction;
 	private global::Gtk.Action refreshAction;
-	private global::Gtk.Action Action;
 	private global::Gtk.VBox vbox1;
-	private global::Gtk.Toolbar toolBar;
+	private global::Gtk.Toolbar toolbar1;
 	private global::Gtk.ScrolledWindow GtkScrolledWindow;
 	private global::Gtk.TreeView treeView;
 
@@ -19,17 +19,17 @@ public partial class MainWindow
 		// Widget MainWindow
 		this.UIManager = new global::Gtk.UIManager ();
 		global::Gtk.ActionGroup w1 = new global::Gtk.ActionGroup ("Default");
-		this.newAction = new global::Gtk.ToggleAction ("newAction", null, null, "gtk-new");
+		this.newAction = new global::Gtk.Action ("newAction", null, null, "gtk-new");
 		w1.Add (this.newAction, null);
-		this.editAction = new global::Gtk.RadioAction ("editAction", null, null, "gtk-edit", 0);
-		this.editAction.Group = new global::GLib.SList (global::System.IntPtr.Zero);
+		this.editAction = new global::Gtk.Action ("editAction", null, null, "gtk-edit");
 		w1.Add (this.editAction, null);
+		this.ArchivoAction = new global::Gtk.Action ("ArchivoAction", global::Mono.Unix.Catalog.GetString ("Archivo"), null, null);
+		this.ArchivoAction.ShortLabel = global::Mono.Unix.Catalog.GetString ("Archivo");
+		w1.Add (this.ArchivoAction, null);
 		this.deleteAction = new global::Gtk.Action ("deleteAction", null, null, "gtk-delete");
 		w1.Add (this.deleteAction, null);
 		this.refreshAction = new global::Gtk.Action ("refreshAction", null, null, "gtk-refresh");
 		w1.Add (this.refreshAction, null);
-		this.Action = new global::Gtk.Action ("Action", null, null, null);
-		w1.Add (this.Action, null);
 		this.UIManager.InsertActionGroup (w1, 0);
 		this.AddAccelGroup (this.UIManager.AccelGroup);
 		this.Name = "MainWindow";
@@ -40,12 +40,12 @@ public partial class MainWindow
 		this.vbox1.Name = "vbox1";
 		this.vbox1.Spacing = 6;
 		// Container child vbox1.Gtk.Box+BoxChild
-		this.UIManager.AddUiFromString ("<ui><toolbar name='toolBar'><toolitem name='newAction' action='newAction'/><toolitem name='editAction' action='editAction'/><separator/><toolitem name='deleteAction' action='deleteAction'/><separator/><toolitem name='refreshAction' action='refreshAction'/><toolitem name='Action' action='Action'/></toolbar></ui>");
-		this.toolBar = ((global::Gtk.Toolbar)(this.UIManager.GetWidget ("/toolBar")));
-		this.toolBar.Name = "toolBar";
-		this.toolBar.ShowArrow = false;
-		this.vbox1.Add (this.toolBar);
-		global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.toolBar]));
+		this.UIManager.AddUiFromString ("<ui><toolbar name='toolbar1'><toolitem name='newAction' action='newAction'/><toolitem name='editAction' action='editAction'/><separator/><toolitem name='deleteAction' action='deleteAction'/><separator/><toolitem name='refreshAction' action='refreshAction'/></toolbar></ui>");
+		this.toolbar1 = ((global::Gtk.Toolbar)(this.UIManager.GetWidget ("/toolbar1")));
+		this.toolbar1.Name = "toolbar1";
+		this.toolbar1.ShowArrow = false;
+		this.vbox1.Add (this.toolbar1);
+		global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.toolbar1]));
 		w2.Position = 0;
 		w2.Expand = false;
 		w2.Fill = false;
