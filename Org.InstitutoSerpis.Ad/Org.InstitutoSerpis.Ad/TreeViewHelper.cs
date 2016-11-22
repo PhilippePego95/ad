@@ -74,7 +74,13 @@ namespace Org.InstitutoSerpis.Ad
 			object item = treeView.Model.GetValue(treeIter, 0);
 			return item == Null.Value ? null : item.GetType ().GetProperty ("Id").GetValue (item, null);
 		}
-	}
-
+		public static object GetItem(TreeView treeView) {
+			TreeIter treeIter; 
+			bool selected = treeView.Selection.GetSelected(out treeIter);
+			if (!selected)
+				return null;
+			return treeView.Model.GetValue(treeIter, 0);
+		}
+	}	
 }
 

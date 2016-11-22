@@ -38,7 +38,7 @@
       </action>
     </action-group>
     <property name="MemberName" />
-    <property name="Title" translatable="yes">MainWindow</property>
+    <property name="Title" translatable="yes">Artículo</property>
     <property name="WindowPosition">CenterOnParent</property>
     <signal name="DeleteEvent" handler="OnDeleteEvent" />
     <child>
@@ -182,6 +182,7 @@
                     <property name="ClimbRate">1</property>
                     <property name="Digits">2</property>
                     <property name="Numeric">True</property>
+                    <property name="Value">4</property>
                   </widget>
                   <packing>
                     <property name="Position">0</property>

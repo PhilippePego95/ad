@@ -1,6 +1,5 @@
 using Gtk;
 using MySql.Data.MySqlClient;
-//using MySql.Data.MySqlClient;
 using System;
 using System.Collections;
 using System.Data;
@@ -9,14 +8,17 @@ using Org.InstitutoSerpis.Ad;
 using PArticulo;
 
 public partial class MainWindow: Gtk.Window
-{	
+{	private IEntityDao<Articulo> entityDao;
 	public MainWindow (): base (Gtk.WindowType.Toplevel)
 	{
 		Build ();
 		App.Instance.DbConnection = new MySqlConnection (
 			"Database=dbprueba;User Id=root;Password=sistemas"
-		);
+			);
 		App.Instance.DbConnection.Open ();
+		//IDbCommand dbCommand = App.Instance.DbConnection.CreateCommand ();
+		//dbCommand.CommandText = "update articulo set precio = 0 where precio is null";
+		//dbCommand.ExecuteNonQuery ();
 
 		fill ();
 
@@ -27,40 +29,40 @@ public partial class MainWindow: Gtk.Window
 		};
 
 		newAction.Activated += delegate {
-			new ArticuloView();
+			Articulo articulo = new Articulo();
+			articulo.Nombre= string.Empty;
+			articulo.Precio=0;
+			new ArticuloView(articulo);
 		};
 
 		deleteAction.Activated += delegate {
-			MessageDialog messageDialog = new MessageDialog(
-				this,
-				DialogFlags.Modal,
-				MessageType.Question,
-				ButtonsType.YesNo,
-				"¿Quieres eliminar el registro?"
-			);
-			ResponseType response = (ResponseType)messageDialog.Run();
-			messageDialog.Destroy();
-			if (response != ResponseType.Yes)
-				return;
-			ArticuloDao.Delete(TreeViewHelper.GetId(treeView));			
-			refreshAction.Activate();
-			return;
-			//TODO eliminar
-
-		};                             
+			if (WindowHelper.confirm(this, "¿Quieres eliminar el registro?"))
+				ArticuloDao.Delete(TreeViewHelper.GetId(treeView));
+		};
 
 
 		refreshAction.Activated += delegate {
 			fill();
 		};
 
-	//	new ArticuloView ();
+		editAction.Activated += delegate {
+		//	ArticuloDao articuloDao=new ArticuloDao();
+			Articulo articulo = entityDao.Load((long)TreeViewHelper.GetId(treeView));
+			new ArticuloView(articulo);
+		};
+
+
+	}
+	public IEntityDao<Articulo> EntityDao{
+		set {entityDao = value;}
 	}
 
 	private void fill() {
 		editAction.Sensitive = false;
 		deleteAction.Sensitive = false;
-		IList list = ArticuloDao.GetList ();
+		//IList list = ArticuloDao.GetList ();
+		//IList list = EntityDao.GetList<Articulo> ();
+		IList list = EntityDao.GetList<Articulo> ();
 		TreeViewHelper.Fill (treeView, list);
 	}
 

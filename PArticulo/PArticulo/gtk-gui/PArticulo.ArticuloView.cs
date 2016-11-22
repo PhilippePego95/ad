@@ -83,6 +83,7 @@ namespace PArticulo
 			this.spinButtonPrecio.ClimbRate = 1;
 			this.spinButtonPrecio.Digits = ((uint)(2));
 			this.spinButtonPrecio.Numeric = true;
+			this.spinButtonPrecio.Value = 4;
 			this.hbox1.Add (this.spinButtonPrecio);
 			global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.spinButtonPrecio]));
 			w5.Position = 0;
