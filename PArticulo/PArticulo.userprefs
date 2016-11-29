@@ -1,15 +1,19 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="PArticulo/ArticuloView.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PArticulo/MainWindow.cs">
     <Files>
-      <File FileName="PArticulo/MainWindow.cs" Line="33" Column="34" />
+      <File FileName="PArticulo/ArticuloDao.cs" Line="45" Column="4" />
+      <File FileName="PArticulo/MainWindow.cs" Line="6" Column="1" />
       <File FileName="PArticulo/ArticuloView.cs" Line="32" Column="4" />
-      <File FileName="PArticulo/ArticuloDao.cs" Line="48" Column="28" />
+      <File FileName="PArticulo/IEntityDao.cs" Line="8" Column="10" />
+      <File FileName="PArticulo/Program.cs" Line="12" Column="17" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="Org.InstitutoSerpis.Ad" expanded="True" />
+          <Node name="PArticulo" expanded="True">
+            <Node name="MainWindow.cs" selected="True" />
+          </Node>
         </State>
       </Pad>
     </Pads>
