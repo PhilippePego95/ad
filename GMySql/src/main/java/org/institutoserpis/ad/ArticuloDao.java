@@ -19,12 +19,9 @@ public class ArticuloDao {
 					resultSet.getObject("nombre"),
 					resultSet.getObject("precio"),
 					resultSet.getObject("categoria"));
-
-		}
-		
+		}		
 		statement.close();		
 		connection.close();
 		System.out.println("fin de conexión");
 	}
-
 }
