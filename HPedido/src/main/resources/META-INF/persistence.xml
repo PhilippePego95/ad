@@ -11,7 +11,7 @@
 
     <persistence-unit name="org.institutoserpis.ad.hpedido">
         <description>
-          Persistence unit for MySql 
+            Persistence unit for HPedido
         </description>
 
         <properties>
@@ -20,9 +20,7 @@
             <property name="javax.persistence.jdbc.password" value="sistemas" />
 
             <property name="hibernate.show_sql" value="true" />
-            <!-- 
-            <property name="hibernate.hbm2ddl.auto" value="create" />  
-            -->
+            <!-- <property name="hibernate.hbm2ddl.auto" value="create" />-->
         </properties>
 
     </persistence-unit>
